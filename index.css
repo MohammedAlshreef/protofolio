@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --txt-color:#ffe3ea;
+    --a-color:#2f4858;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+body{
+    width: 100dvw;
+    min-height: 100vh;
+    background-image: url(./photo_2024-12-18_13-46-42.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    position: relative;
+}
+.blur{
+    width: 100%;
+    min-height: 100dvh;
+    backdrop-filter: blur(16px);
+    background-color: #00000085;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+header{
+    width: 90%;
+    height: 64px;
+    box-shadow: 0 2px 0 var(--txt-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 16px;
+}
+header .nav {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+header .nav-logo{
+    width: 32px;
+    height: 24px;
+    display: none;
+}
+header .nav-logo span{
+    height: 4px;
+    width: 100%;
+    background-color: var(--txt-color);
+}
+header .navigation{
+    max-width: 50%;
+    min-width: 256px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+}
+header .logo{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+header a{
+    text-decoration: none;
+    color: var(--txt-color);
+    font-size: 1.2rem;
+}
+a:hover{
+    transform: scale(1.1);
+}
+
+.main{
+    color: var(--txt-color);
+    min-height: 100dvh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main h1{
+    font-size: 2.5em;
+    color: #fff;
+}
+.main a{
+    margin-top: 16px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: var(--txt-color);
+    text-decoration: none;
+    color: var(--a-color);
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+
+@media (max-width: 768px){
+    header .nav-logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    header .navigation{
+        padding: 16px;
+        display: none; 
+        flex-flow: column;
+        background: #a8a8a875;
+        position: absolute;
+        border-radius: 8px;
+        right: 32px;
+    }
+}
